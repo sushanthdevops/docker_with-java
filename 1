@@ -2,23 +2,18 @@
 
 FROM ubuntu:latest
 
-#create workdir
+# create a working direactory
 
 WORKDIR /app
 
-#copy all files to workdir
+#copy all the files into workdir
 
 COPY . /app
 
-#environmental variables
-
-ENV hello world
-
-#install python
+#install python 
 
 RUN apt-get update && apt-get install -y python
 
-#run python files
+# Run the commands
 
 CMD ["python","sample.py"]
-
